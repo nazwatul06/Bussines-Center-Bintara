@@ -323,6 +323,7 @@ orderForm.addEventListener("submit", function(event) {
   const group = formData.get("group").trim();
   const location = formData.get("location").trim();
   const method = formData.get("method");
+  const payment = formData.get("payment");
   const notes = formData.get("notes").trim();
 
   if (!customer || !group || !location) {
