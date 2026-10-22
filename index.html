@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b2c">
+  <title>Bussines Center BINTARA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">B</span>
+      <span>
+        <strong>BUSSINES CENTER</strong>
+        <small>BINTARA · SMK NEGERI 1 TUREN</small>
+      </span>
+    </a>
+    <a href="#produk" class="nav-link">Lihat Produk ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">✦ BELANJA JADI LEBIH MUDAH</span>
+        <h1>Pesan kebutuhanmu.<br><span>Tanpa antre.</span></h1>
+        <p>Temukan makanan, minuman, dan kebutuhan sekolah dalam satu tempat. Pilih produk, isi pesanan, lalu konfirmasi dengan mudah.</p>
+        <a href="#produk" class="primary-link">Mulai Belanja <span>↓</span></a>
+        <div class="hero-note">
+          <span class="live-dot"></span>
+          Praktis · Cepat · Untuk warga sekolah
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="mini-label">BUSSINES CENTER BINTARA</div>
+        <div class="hero-illustration">🛍️</div>
+        <h3>Semua kebutuhanmu, lebih dekat.</h3>
+        <p>Pesan dari HP, ambil sesuai konfirmasi pengelola.</p>
+        <div class="hero-tags">
+          <span>🍜 Makanan</span>
+          <span>🥤 Minuman</span>
+          <span>📚 ATK</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-strip">
+      <div><span>01</span><p><strong>Pilih produk</strong><small>Temukan kebutuhanmu</small></p></div>
+      <div><span>02</span><p><strong>Isi pesanan</strong><small>Masukkan data dengan benar</small></p></div>
+      <div><span>03</span><p><strong>Konfirmasi</strong><small>Kirim ke pengelola</small></p></div>
+    </section>
+
+    <section id="produk" class="shop-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">KATALOG PILIHAN</span>
+          <h2>Belanja kebutuhanmu</h2>
+          <p>Pilih produk yang kamu inginkan.</p>
+        </div>
+        <div class="cart-counter">🛒 <span id="cart-count">0</span> item</div>
+      </div>
+
+      <div class="filters">
+        <input id="search" type="search" placeholder="Cari nama produk..." aria-label="Cari produk">
+        <select id="category" aria-label="Kategori produk">
+          <option value="Semua">Semua kategori</option>
+          <option value="Makanan">Makanan</option>
+          <option value="Minuman">Minuman</option>
+          <option value="ATK">Alat tulis</option>
+        </select>
+      </div>
+
+      <div id="product-list" class="product-grid"></div>
+
+      <div class="order-layout">
+        <section class="panel">
+          <div class="panel-title">
+            <span class="panel-icon">🛒</span>
+            <div><h3>Keranjang pesanan</h3><p>Periksa pilihanmu sebelum memesan.</p></div>
+          </div>
+          <div id="cart-items">
+            <p class="empty-cart">Keranjangmu masih kosong. Yuk, pilih produk!</p>
+          </div>
+          <div class="total-row">
+            <span>Total belanja</span>
+            <strong id="total">Rp0</strong>
+          </div>
+          <p class="limit-note">Jumlah pembelian dibatasi sesuai ketentuan setiap produk.</p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">
+            <span class="panel-icon">📝</span>
+            <div><h3>Data pemesan</h3><p>Isi data untuk membantu pesanan diproses.</p></div>
+          </div>
+
+          <form id="order-form">
+            <label for="customer">Nama lengkap *</label>
+            <input id="customer" name="customer" required maxlength="80"
+                   placeholder="Contoh: Nazwa">
+
+            <label for="group">Kelas / bagian *</label>
+            <input id="group" name="group" required maxlength="60"
+                   placeholder="Contoh: XI TKJ 1 / Guru">
+
+            <label for="location">Lokasi pengantaran / pengambilan *</label>
+            <input id="location" name="location" required maxlength="120"
+                   placeholder="Contoh: Ruang kelas XI TKJ 1">
+
+            <label for="method">Metode penerimaan *</label>
+            <select id="method" name="method" required>
+              <option value="Ambil sendiri">Ambil sendiri</option>
+              <option value="Antar ke lokasi">Antar ke lokasi (jika tersedia)</option>
+            </select>
+
+            <label for="notes">Catatan tambahan</label>
+            <textarea id="notes" name="notes" rows="3" maxlength="300"
+                      placeholder="Contoh: Tidak pedas (opsional)"></textarea>
+
+            <div class="checkout-total">
+              <span>Total pesanan</span>
+              <strong id="form-total">Rp0</strong>
+            </div>
+            <button class="submit-button" type="submit">
+              Konfirmasi via WhatsApp ↗
+            </button>
+            <p class="privacy-note">Pastikan nama, lokasi, dan pesanan sudah benar sebelum dikirim.</p>
+            <p id="form-message" class="form-message" role="status"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section class="qr-section">
+      <div>
+        <span class="eyebrow">AKSES DIGITAL</span>
+        <h2>Scan dan mulai pesan.</h2>
+        <p>Pindai QR code ini untuk membuka website. QR code akan menggunakan alamat website yang sedang dibuka.</p>
+      </div>
+      <div class="qr-box">
+        <div id="qrcode" aria-label="QR code website"></div>
+        <small>BUSSINES CENTER BINTARA</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">B<span>INTARA</span></div>
+    <p>BUSSINES CENTER · SMK NEGERI 1 TUREN</p>
+    <small>Belanja lebih mudah, aktivitas sekolah lebih produktif.</small>
+  </footer>
+
+  <!-- Library pembuat QR code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
