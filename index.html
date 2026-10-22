@@ -100,7 +100,7 @@
           <form id="order-form">
             <label for="customer">Nama lengkap *</label>
             <input id="customer" name="customer" required maxlength="80"
-                   placeholder="Contoh: Nazwa">
+                   placeholder="Your Name">
 
             <label for="group">Kelas / bagian *</label>
             <input id="group" name="group" required maxlength="60"
@@ -108,17 +108,29 @@
 
             <label for="location">Lokasi pengantaran / pengambilan *</label>
             <input id="location" name="location" required maxlength="120"
-                   placeholder="Contoh: Ruang kelas XI TKJ 1">
+                   placeholder="Contoh: Ruang D101">
 
             <label for="method">Metode penerimaan *</label>
             <select id="method" name="method" required>
               <option value="Ambil sendiri">Ambil sendiri</option>
-              <option value="Antar ke lokasi">Antar ke lokasi (jika tersedia)</option>
+              <option value="Antar ke lokasi">Antar ke lokasi</option>
             </select>
+
+<label for="payment">Metode pembayaran *</label>
+<select id="payment" name="payment" required>
+  <option value="">-- Pilih metode pembayaran --</option>
+  <option value="ShopeePay">ShopeePay</option>
+  <option value="Tunai">Tunai (bayar langsung)</option>
+  <option value="QRIS">QRIS</option>
+  <option value="DANA">DANA</option>
+</select>
+<p class="privacy-note">
+  Pembayaran digital mengikuti petunjuk dari pengelola.
+</p>
 
             <label for="notes">Catatan tambahan</label>
             <textarea id="notes" name="notes" rows="3" maxlength="300"
-                      placeholder="Contoh: Tidak pedas (opsional)"></textarea>
+                      placeholder="Notes"></textarea>
 
             <div class="checkout-total">
               <span>Total pesanan</span>
@@ -158,15 +170,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-<label for="payment">Metode pembayaran *</label>
-<select id="payment" name="payment" required>
-  <option value="">-- Pilih metode pembayaran --</option>
-  <option value="ShopeePay">ShopeePay</option>
-  <option value="Tunai">Tunai (bayar langsung)</option>
-  <option value="QRIS">QRIS</option>
-  <option value="DANA">DANA</option>
-</select>
-<p class="privacy-note">
-  Pembayaran digital mengikuti petunjuk dari pengelola.
-</p>
